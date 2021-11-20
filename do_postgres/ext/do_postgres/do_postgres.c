@@ -11,7 +11,7 @@
 #undef PACKAGE_TARNAME
 #undef PACKAGE_VERSION
 
-#ifdef _WIN32
+#if defined(_WIN32) || USE_REPL_SNPRINTF
 /* On Windows this stuff is also defined by Postgres, but we don't
    want to use Postgres' version actually */
 #undef fsync
