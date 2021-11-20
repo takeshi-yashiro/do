@@ -25,6 +25,7 @@ end
 
 def have_build_env
   (have_library('pq') || have_library('libpq')) &&
+  (have_library('pgport') || true) &&
   have_header('libpq-fe.h') && have_header('libpq/libpq-fs.h') &&
   have_header('postgres.h') &&
   have_header_with_preheader('mb/pg_wchar.h', 'postgres.h') &&
